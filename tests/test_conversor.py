@@ -32,3 +32,12 @@ def test_kilogramos_a_libras_basico():
     resultado = kilogramos_a_libras(kg)
     # Assert
     assert round(resultado, 2) == 22.05
+import pytest
+from src.fibonacci import fibonacci_iterativo
+
+def test_fibonacci_negativo_lanza_error():
+    # Arrange
+    n = -3
+    # Act & Assert
+    with pytest.raises(ValueError):
+        fibonacci_iterativo(n)

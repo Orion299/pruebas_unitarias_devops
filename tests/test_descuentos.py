@@ -28,3 +28,13 @@ def test_descuento_limite_maximo():
 def test_descuento_negativo_lanza_error():
     with pytest.raises(ValueError):
         calcular_descuento(100.0, -10.0)
+import pytest
+from src.descuentos import calcular_descuento
+
+def test_descuento_negativo_lanza_error():
+    # Arrange
+    precio = 100.0
+    porcentaje = -10.0
+    # Act & Assert
+    with pytest.raises(ValueError):
+        calcular_descuento(precio, porcentaje)

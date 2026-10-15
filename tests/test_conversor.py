@@ -41,3 +41,10 @@ def test_fibonacci_negativo_lanza_error():
     # Act & Assert
     with pytest.raises(ValueError):
         fibonacci_iterativo(n)
+import pytest
+from src.conversor import kelvin_a_celsius
+
+def test_kelvin_negativo_lanza_error():
+    # Arrange & Act & Assert
+    with pytest.raises(ValueError):
+        kelvin_a_celsius(-5)

@@ -84,3 +84,9 @@ def galones_a_litros(galones):
     if galones < 0:
         raise ValueError("El volumen no puede ser negativo")
     return galones * 3.78541
+
+def celsius_a_fahrenheit(celsius):
+    """Convierte grados Celsius a Fahrenheit."""
+    if celsius < -273.15:
+        raise ValueError("La temperatura no puede ser menor al cero absoluto")
+    return (celsius * 9/5) + 32
